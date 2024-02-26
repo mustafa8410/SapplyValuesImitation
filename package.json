@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "scss": "node-sass -w scss -o css --output-style compressed"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "node-sass": "^9.0.0"
+  }
+}

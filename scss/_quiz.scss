@@ -1,0 +1,14 @@
+#success-subtle{
+  background-color: lighten(#198754, 10%);
+
+  &:hover{
+    background-color: lighten(#157347, 10%);
+  }
+  &:active{
+    background-color: lighten(#146c43, 10%) !important;
+  }
+}
+
+#danger-subtle{
+  background-color: lighten(#dc3545, 10%);
+}

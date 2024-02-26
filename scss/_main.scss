@@ -1,0 +1,13 @@
+article{
+  .article-content{
+    p{
+      text-indent: each-line;
+      .outsider-link{
+        text-decoration: none;
+        &:hover{
+          color: #0dcaf0;
+        }
+      }
+    }
+  }
+}
