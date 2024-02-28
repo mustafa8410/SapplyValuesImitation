@@ -1,4 +1,4 @@
-#success-subtle{
+#agree{
   background-color: lighten(#198754, 10%);
 
   &:hover{
@@ -9,6 +9,13 @@
   }
 }
 
-#danger-subtle{
+#disagree{
   background-color: lighten(#dc3545, 10%);
+
+  &:hover{
+    background-color: lighten(#bb2d3b, 10%);
+  }
+  &:active{
+    background-color: lighten(#b02a37, 10%);
+  }
 }
