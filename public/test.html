@@ -27,7 +27,10 @@
         <button class="answer-button btn btn-secondary btn-lg" id="neutral" onclick="nextQuestion(0.0)">Neutral</button>
         <button class="answer-button btn btn-danger btn-lg" id="disagree" onclick="nextQuestion(-0.5)">Disagree</button>
         <button class="answer-button btn btn-danger btn-lg" id="strongly-disagree" onclick="nextQuestion(-1.0)">Strongly Disagree</button>
-        <button class="prev-button btn btn-dark btn-lg disabled" id="go-back" onclick="previousQuestion()" >Previous Question</button>
+        <div class="row my-0 mx-0 gap-2" id="lastButtonRow">
+            <button class="prev-button btn btn-dark btn-lg disabled" id="go-back" onclick="previousQuestion()" >Previous Question</button>
+        </div>
+
 
     </div>
 </main>

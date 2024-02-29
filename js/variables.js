@@ -6,5 +6,6 @@ var answerValues = new Map();
 const isShuffled = document.URL.includes("shuffle=true");
 const questionNumber = document.getElementById("question-number");
 const questionTag = document.getElementById("question");
-const answerButton = document.querySelectorAll(".answer-group .answer-button");
+const lastButtonRow = document.getElementById("lastButtonRow");
+const answerButton = document.querySelectorAll(".answer-button");
 const prevButton = document.querySelector(".prev-button");

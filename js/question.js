@@ -91,7 +91,7 @@ const nextQuestion = (buttonValue) => {
     counter++;
     const showQuestionCheck = showQuestion();
     if(!showQuestionCheck){
-        showResults();
+        testEnd();
     }
 }
 
@@ -118,6 +118,17 @@ const previousQuestion = () => {
     showQuestion();
 }
 
+const testEnd = () => {
+    let resultButton = `
+        <button class="btn btn-outline-info btn-lg col-md-6" id="result">Show Results</button>
+    `
+    prevButton.classList.add("col-md-6");
+    lastButtonRow.insertAdjacentHTML("beforeend", resultButton);
+    for(let answer of answerButton){
+        answer.classList.add("disabled");
+        console.log(answer.classList);
+    }
+}
 
 
 
