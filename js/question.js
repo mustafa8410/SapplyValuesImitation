@@ -60,10 +60,77 @@ const shuffle = (array) => {
 const showQuestion = () => {
     if(counter < questions.length){
         let currentQuestion = questions[counter];
-        questionNumber.innerText = (++counter).toString();
+        questionNumber.innerText = `${counter + 1}`;
         questionTag.innerText = currentQuestion.question;
         return true;
     }
     else
         return false;
 }
+
+const nextQuestion = (buttonValue) => {
+    const currentQuestion = questions[counter];
+    const keyName = Object.keys(currentQuestion.effects)[0];
+    switch (keyName){
+        case "right":
+            right += buttonValue * currentQuestion.effects.right;
+            console.log("right: " + right);
+            break;
+        case "auth":
+            auth += buttonValue * currentQuestion.effects.auth;
+            console.log("auth: " + auth);
+            break;
+        case "prog":
+            prog += buttonValue * currentQuestion.effects.prog;
+            console.log("prog: " + prog);
+            break;
+    }
+    answerValues.set(currentQuestion.id,buttonValue);
+    if(counter == 0)
+        prevButton.classList.remove("disabled");
+    counter++;
+    const showQuestionCheck = showQuestion();
+    if(!showQuestionCheck){
+        showResults();
+    }
+}
+
+const previousQuestion = () => {
+    if(counter == 1)
+        prevButton.classList.add("disabled");
+    counter--;
+    const currentQuestion = questions[counter];
+    const keyName = Object.keys(currentQuestion.effects)[0];
+    switch (keyName){
+        case "right":
+            right -= answerValues.get(currentQuestion.id) * currentQuestion.effects.right;
+            console.log("right: " + right);
+            break;
+        case "auth":
+            auth -= answerValues.get(currentQuestion.id) * currentQuestion.effects.auth;
+            console.log("auth: " + auth);
+            break;
+        case "prog":
+            prog -= answerValues.get(currentQuestion.id) * currentQuestion.effects.prog;
+            console.log("prog: " + prog);
+            break;
+    }
+    showQuestion();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const showResults = () => console.log("Not completed yet.");

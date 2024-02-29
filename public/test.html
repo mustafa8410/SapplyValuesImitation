@@ -22,12 +22,12 @@
     </div>
 
     <div id="answer-group" class="d-grid col-md-6 mx-auto my-5 gap-2">
-        <button class="answer-button btn btn-success btn-lg" id="strongly-agree">Strongly Agree</button>
-        <button class="answer-button btn btn-success btn-lg" id="agree">Agree</button>
-        <button class="answer-button btn btn-secondary btn-lg" id="neutral">Neutral</button>
-        <button class="answer-button btn btn-danger btn-lg" id="disagree">Disagree</button>
-        <button class="answer-button btn btn-danger btn-lg" id="strongly-disagree">Strongly Disagree</button>
-        <button class="prev-button btn btn-dark btn-lg" id="go-back">Previous Question</button>
+        <button class="answer-button btn btn-success btn-lg" id="strongly-agree" onclick="nextQuestion(1.0)">Strongly Agree</button>
+        <button class="answer-button btn btn-success btn-lg" id="agree" onclick="nextQuestion(0.5)">Agree</button>
+        <button class="answer-button btn btn-secondary btn-lg" id="neutral" onclick="nextQuestion(0.0)">Neutral</button>
+        <button class="answer-button btn btn-danger btn-lg" id="disagree" onclick="nextQuestion(-0.5)">Disagree</button>
+        <button class="answer-button btn btn-danger btn-lg" id="strongly-disagree" onclick="nextQuestion(-1.0)">Strongly Disagree</button>
+        <button class="prev-button btn btn-dark btn-lg disabled" id="go-back" onclick="previousQuestion()" >Previous Question</button>
 
     </div>
 </main>

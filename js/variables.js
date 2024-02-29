@@ -1,7 +1,8 @@
 var counter = 0;
-var authoritarian = 0;
-var economic= 0;
-var progressive = 0;
+var auth = 0;
+var right= 0;
+var prog = 0;
+var answerValues = new Map();
 const isShuffled = document.URL.includes("shuffle=true");
 const questionNumber = document.getElementById("question-number");
 const questionTag = document.getElementById("question");
