@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Results</title>
+</head>
+<body class="bg-light-subtle">
+    <main class="container-lg bg-light my-2 vh-100">
+        <header class="text-center my-4 border-bottom border-2 pb-3 ">
+            <h1 class="p-2 ">Sapply Values Imitation</h1>
+        </header>
+
+        <h2 class="text-center mb-2">Results</h2>
+
+        <div class="content d-flex flex-column justify-content-center">
+            <div class="my-4">
+                <div class="bar-container p-2">
+                    <div class="title-container d-flex align-items-center justify-content-between">
+                        <h4>Authoritarian</h4> <h4>Libertarian</h4>
+                    </div>
+                    <div class="progress-stacked result-bar" id="auth-lib">
+                        <div class="progress" id="auth-bar" role="progressbar" aria-label="Segment one" style="width: 15%">
+                            <div class="progress-bar">
+                                <strong class="d-none d-md-inline">%15 Authoritarian</strong>
+                            </div>
+                        </div>
+                        <div class="progress" id="lib-bar" role="progressbar" aria-label="Segment two"  style="width: 85%">
+                            <div class="progress-bar bg-success">
+                                <strong class="d-none d-md-inline">%85 Libertarian</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-container p-2">
+                    <div class="title-container d-flex align-items-center justify-content-between">
+                        <h4>Economic Left</h4> <h4>Economic Right</h4>
+                    </div>
+                    <div class="progress-stacked result-bar" id="left-right">
+                        <div class="progress" id="left-bar" role="progressbar" aria-label="Segment one" style="width: 45%">
+                            <div class="progress-bar">
+                                <strong class="d-none d-md-inline">%45 Left</strong>
+                            </div>
+                        </div>
+                        <div class="progress" id="right-bar" role="progressbar" aria-label="Segment two" style="width: 55%">
+                            <div class="progress-bar bg-success">
+                                <strong class="d-none d-md-inline">%55 Right</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-container p-2">
+                    <div class="title-container d-flex align-items-center justify-content-between">
+                        <h4>Conservative</h4> <h4>Progressive</h4>
+                    </div>
+                    <div class="progress-stacked result-bar" id="conservative-progressive">
+                        <div class="progress" id="cons-bar" role="progressbar" aria-label="Segment one" style="width: 67%">
+                            <div class="progress-bar">
+                                <strong class="d-none d-md-inline">%67 Conservative</strong>
+                            </div>
+                        </div>
+                        <div class="progress" id="prog-bar" role="progressbar" aria-label="Segment two" style="width: 33%">
+                            <div class="progress-bar bg-success">
+                                <strong class="d-none d-md-inline">%33 Progressive</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="info-in-text text-center py-4 d-md-none">
+                <h5>%15 Authoritarian, %75 Libertarian</h5>
+                <h5>%15 Economic-Left, %75 Economic-Right</h5>
+                <h5>%15 Conservative, %75 Progressive</h5>
+            </div>
+
+            <div id="start-btn-container" class="d-grid mx-auto col-6 mt-3">
+                <a href="index.html" class="btn btn-primary" role="button">Go Back</a>
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+<script src="../js/result.js"></script>
+</body>
+</html>
