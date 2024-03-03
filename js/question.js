@@ -98,6 +98,17 @@ const nextQuestion = (buttonValue) => {
 const previousQuestion = () => {
     if(counter == 1)
         prevButton.classList.add("disabled");
+    if(counter == questions.length ){
+        document.getElementById("lastButtonRow").innerHTML = `
+            <button class="prev-button btn btn-dark btn-lg mb-1"
+            id="go-back" onclick="previousQuestion()" >Previous Question</button>`
+        prevButton = document.getElementById("go-back");
+
+        for(let answer of answerButton){
+            answer.classList.remove("disabled");
+        }
+    }
+
     counter--;
     const currentQuestion = questions[counter];
     const keyName = Object.keys(currentQuestion.effects)[0];
@@ -120,14 +131,17 @@ const previousQuestion = () => {
 
 const testEnd = () => {
     let resultButton = `
-        <button class="btn btn-outline-info btn-lg col-md-6" id="result">Show Results</button>
+        <button class="btn btn-outline-info btn-lg col-md-5" id="result" onclick="showResults()">Show Results</button>
     `
-    prevButton.classList.add("col-md-6");
+    prevButton.classList.add("col-md-5");
     lastButtonRow.insertAdjacentHTML("beforeend", resultButton);
     for(let answer of answerButton){
         answer.classList.add("disabled");
-        console.log(answer.classList);
     }
+}
+
+const showResults = () => {
+    location.href = "result.html?" + `right=${right}&auth=${auth}&prog=${prog}`;
 }
 
 
@@ -142,6 +156,3 @@ const testEnd = () => {
 
 
 
-
-
-const showResults = () => console.log("Not completed yet.");
